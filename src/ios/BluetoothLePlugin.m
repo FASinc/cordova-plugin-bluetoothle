@@ -720,7 +720,12 @@ NSString *const operationWrite = @"write";
   }
 
   //Initialize central manager
-  centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:options];
+  centralManager = [[CBCentralManager alloc]
+        initWithDelegate:self
+        queue:nil
+        options:@{
+            //CBCentralManagerOptionRestoreIdentifierKey: @"EVOCentralManagerIdentifier",
+            CBCentralManagerOptionShowPowerAlertKey: @YES }];
 
   //Create dictionary to hold connections and all their callbacks
   connections = [NSMutableDictionary dictionary];

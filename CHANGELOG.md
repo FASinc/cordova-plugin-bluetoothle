@@ -1,3 +1,6 @@
+## 6.7.5 - 2024-11-16
+- Fix: modify CBCentralManager initialization to avoid requiring bluetooth-central background mode
+
 ## 6.7.4 - 2023-04-07
 - Fix advertise permissions for Android 12
 
